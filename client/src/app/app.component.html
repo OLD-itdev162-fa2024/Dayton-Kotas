@@ -1,10 +1,10 @@
 <h1>{{title}}</h1>
 
-<mat-toolbar>
+<mat-toolbar color="primary">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
+    <span>{{title}}</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
@@ -14,10 +14,10 @@
     </button>
 </mat-toolbar>
 
-
 <div *ngFor="let post of posts">
     <mat-card class="post-card">
         <mat-card-title>{{post.title}}</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
         <mat-card-content>
             <p>{{post.date | date : 'longDate'}}</p>
             <p>{{post.body}}</p>
